@@ -1,1 +1,0 @@
-Krux.ns.vodafoneau.kxjsonp_userdata({"status":"200","body":{"code":"dnt","geo":{"domain":"vodafone.it","country":"it","dma":null,"zip":"26825","longitude":"9.59128","latitude":"45.2664","region":"lo"},"technographics":{"browser":"Firefox 53","manufacturer":"Apple Inc.","device":"Computer","os":"Mac OS X"}}});

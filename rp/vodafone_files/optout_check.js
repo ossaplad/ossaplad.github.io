@@ -1,1 +1,0 @@
-Krux.ns.vodafoneau.kxjsonp_optOutCheck({"status":200,"body":{"_kuid_":"DNT"}})

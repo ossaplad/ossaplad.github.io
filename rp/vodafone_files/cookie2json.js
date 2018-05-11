@@ -1,1 +1,0 @@
-Krux.ns.vodafoneau.kxjsonp_3pevents({"status":200,"body":{}})
