@@ -31,6 +31,19 @@
 						}
 					
 		</style>
+		<style>
+	#viewer {
+		height: 384px;
+		overflow: hidden;
+	}
+
+    @media screen and (min-width: 768px) {
+		#viewer {
+			height: 750px;
+		}
+	}
+
+	</style>
 		<link rel='stylesheet' href='https://www.comet.it/flex/Extensions/assets/fe/css/css:83:cat-secondaria~comet~menu.css' type='text/css' media='print, projection, screen' />
 		<meta name="com.silverpop.brandeddomains" content="www.pages06.net,www.comet.it" />
 		<meta name="apple-itunes-app" content="app-id=1205430421" />
@@ -913,7 +926,7 @@
 
 		<div class='container pagina-volantino'>
 			<div class='row' style="margin-top: 10px;">
-				<div class="col-sm-12 maincontent" style="height: 450px; overflow: hidden;">
+				<div class="col-sm-12 maincontent" id="viewer">
 					<iframe src="https://stg-viewer-whitelabel.geniale.com/flyers?language=it_it&propertyId=5b14e2fd-6b4c-4bfe-b888-24bfac1f4cc3" frameborder="0" width="100%" height="100%" allow="geolocation"></iframe>
 				</div>
 			</div>
