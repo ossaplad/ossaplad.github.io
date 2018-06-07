@@ -273,7 +273,7 @@ var FlowFlowOpts = {"streams":{},"open_in_new":"yep","filter_all":"Tutti i socia
 		<style>
 	#viewer {
 		margin-top: 20px;
-		height: 384px;
+		height: 750px;
 	}
 
 	.slide_tip {
@@ -286,9 +286,15 @@ var FlowFlowOpts = {"streams":{},"open_in_new":"yep","filter_all":"Tutti i socia
 		margin: 0 auto;		
 	}
 
-    @media screen and (min-width: 768px) {
+    @media screen and (max-width: 768px) {
 		#viewer {
-			height: 750px;
+			height: 450px;
+		}
+		.sn_footer{
+			display: none;
+		}
+		.sn_newsletter{
+			display: none;
 		}
 	}
 
