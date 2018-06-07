@@ -10,7 +10,6 @@
 		<title>Volantino</title>
 		<meta name="description" content="__" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="google-site-verification" content="4uRwaOIk-4Xd_yLJUKOHDcNvZQSB77SdMs5vPvDz-l0" />
 		<link rel="shortcut icon" href="https://www.comet.it/flex/Extensions/assets/fe/img/favicon.ico">
 		<link rel='stylesheet' href='https://www.comet.it/flex/cm/pages/css.php/b3:bootstrap.min' type='text/css' media='print, projection, screen' />
 		<style type='text/css'>
@@ -54,10 +53,6 @@
 	</head>
 	<body class=" mac chrome vma-66 vmi-0">
 		
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLS9B5B"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
 		
 		<div class='wrapper-navbar '>
 			<div class='container'>
@@ -919,6 +914,18 @@
 						</a>
 						<span>/</span>
 						<strong>Volantino</strong>
+						<span align="right" onclick="var elem = document.getElementById('flyer');
+								if (elem.requestFullscreen) {
+								  elem.requestFullscreen();
+								} else if (elem.msRequestFullscreen) {
+								  elem.msRequestFullscreen();
+								} else if (elem.mozRequestFullScreen) {
+								  elem.mozRequestFullScreen();
+								} else if (elem.webkitRequestFullscreen) {
+								  elem.webkitRequestFullscreen();
+								}">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path fill="white" d="M4.5 11H3v4h4v-1.5H4.5V11zM3 7h1.5V4.5H7V3H3v4zm10.5 6.5H11V15h4v-4h-1.5v2.5zM11 3v1.5h2.5V7H15V3h-4z"/></svg>
+						</span>
 					</div>
 				</div>
 			</div>
@@ -927,7 +934,7 @@
 		<div class='container pagina-volantino'>
 			<div class='row' style="margin-top: 10px;">
 				<div class="col-sm-12 maincontent" id="viewer">
-					<iframe src="https://stg-viewer-whitelabel.geniale.com/flyers?language=it_it&propertyId=5b14e2fd-6b4c-4bfe-b888-24bfac1f4cc3" frameborder="0" width="100%" height="100%" allow="geolocation"></iframe>
+					<iframe id="flyer" src="https://stg-viewer-whitelabel.geniale.com/flyers?language=it_it&propertyId=5b14e2fd-6b4c-4bfe-b888-24bfac1f4cc3" frameborder="0" width="100%" height="100%" allow="geolocation"></iframe>
 				</div>
 			</div>
 		</div>
@@ -1064,13 +1071,6 @@
 			</div>
 		</footer>
 
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id=947121105;
-var google_custom_params=window.google_tag_params;
-var google_remarketing_only=true;
-/* ]]> */
-</script><script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script><noscript>
 <div style="display:inline;">
 <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/947121105/?value=0&amp;guid=ON&amp;script=0"/>
 </div>
