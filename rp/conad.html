@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"><![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js"><!--<![endif]-->
+<head>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Volantino Conad</title>
+<meta name="description" content="Entra e scopri gli orari di apertura, le promozioni e i servizi di Conad">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="google-site-verification" content="JUugBBpPlOV45vgaj75c4Rg8ZbyCwdzbYfZOY-TskmE">
+
+
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://www.conad.it/etc/designs/conad_main/favicon.png">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://www.conad.it/etc/designs/conad_main/favicon.png">
+
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:400,700,700i" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://www.conad.it/etc/designs/conadfoundation/clientlib-css.css" type="text/css"> -->
+<link rel="stylesheet" href="https://www.conad.it/etc/designs/conad_main/clientlib-css.css" type="text/css">
+<link rel="stylesheet" href="https://www.conad.it/etc/designs/conadfoundation/layout.css" type="text/css">
+<link rel="stylesheet" href="https://www.conad.it/etc/designs/conadfoundation/main.css" type="text/css">
+
+<style>
+         #viewer-container {
+         margin: 0 auto;
+         max-width: 960px;
+         height: 475px;
+         }
+         @media screen and (min-width: 768px) {
+         #viewer-container {
+         height: 750px;
+         }
+         }
+</style>
+
+<script>
+      	<!-- PROOF OF CONCEPT: handling deeplinking to the viewer -->
+      	var iframe_container_id = "viewer-container";
+      	var language = "it_it";
+      	var property_id = "5b3b8d85-e7f4-442b-9e52-2046ac1f5264";
+      	var params_prefix = "sfb.";
+      	
+		var route = "flyers";
+		document.addEventListener('DOMContentLoaded', function() {
+			var container = document.getElementById(iframe_container_id);
+			var iframe = container.getElementsByTagName("iframe")[0]
+			var URL = window.location.href;
+			// parse URL params -> fragile code for the POC
+			if (URL && URL.includes('?') && URL.includes('&')) {
+				var params = URL.split('?')[1].split('&');
+				var params_map = []
+				for (var i = 0; i < params.length; i++) {
+						var split = params[i].split('=');
+						if (split[0].startsWith(params_prefix) || split[0].startsWith('utm_')) {
+							var key = split[0].substr(params_prefix.length);
+							params_map[key] = split[1];
+						}
+				}
+				if ('route' in params_map && params_map.route != undefined) {
+					//add route validation
+					route = params_map.route;
+					delete params_map['route'];
+				}
+			}
+			var other_params = 'language=' + language + '&propertyId=' + property_id + '&';
+			if(params_map) {
+				for(key in params_map){
+					other_params += key + '=' + params_map[key] + '&';
+				}
+			}
+			var src = 'https://stg-viewer-whitelabel.geniale.com/' + route + '?' + other_params;
+			console.log(src);
+			iframe.src = src;
+		});
+</script>
+
+<script src="https://www.conad.it/etc/designs/conadfoundation/clientlib-css/js/modernizr-2.6.2.min.js"></script>
+<!--[if lt IE 9]>
+<script src="https://www.conad.it/etc/designs/conadfoundation/clientlib-css/js/respond.min.js"></script>
+<script>
+    message_options = {
+        "theme": "https://www.conad.it/etc/designs/conadfoundation/clientlib-css/css/ie8-disclaimer.min.css"
+    };
+</script>
+<script src="https://www.conad.it/etc/designs/conadfoundation/clientlib-css/js/ie8-disclaimer.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+    var url_location = "https://maps.google.com/maps/api/geocode/json";
+</script>
+
+<script>
+    var login_url= '\/login.html?cb=\/ricerca\u002Dnegozi\/negozio.html';
+    var register_url= '\/registrazione.html?cb=\/ricerca\u002Dnegozi\/negozio.html';
+</script>
+
+
+<script>
+    var DTMdataLayer = {
+        'userInfo' : {
+            'userId': '',
+            'codiceCartaInsieme': '',
+            'codiceCartaInsiemePiu': '',
+            'negozioPreferito': '',
+            'cooperativa': '',
+            'cooperativaStore': 'NOR',
+            'consenso_a_marketing': '',
+            'consenso_b_profilazione': '',
+            'consenso_c_cooperativa': '',
+            'data_nascita': '',
+            'sesso': '',
+            'cap': '',
+            'provincia': '',
+            'num_comp_famiglia': '',
+            'data_nascita_figlio_1': '',
+            'data_nascita_figlio_2': '',
+            'data_nascita_figlio_3': '',
+            'data_nascita_coniuge' : '',
+            'animali_domestici': '',
+            'abitudini_alimentari_famiglia': '',
+            'interessi_famiglia': '',
+            'acquisti_online': '',
+            'pref_com_newsletter' : '',
+            'pref_com_solo_per_te': '',
+            'saldo_punti': '',
+            'punti_spesi': '',
+            'punti_accumulati': '',
+            'provenienza': '',
+            'accesso_minisito': '',
+            'cardistaC': '',
+        },
+        'negozioInfo' : {
+            'idNegozio': '008411'
+        },
+        'prodottoInfo': {
+            'ean': '',
+            'categoria': '',
+            'sottocategoria': '',
+            'mondo': '',
+            'marchio': '',
+            'sottomarchio': ''
+        },
+        'ricetta': {
+            'categoria': '',
+            'sottocategoria': '',
+            'marchio': '',
+            'sottomarchio': '',
+            'mondo': '',
+            'regione': '',
+            'tag': ''
+        },
+        'consiglio': {
+            'categoria': '',
+            'sottocategoria': '',
+            'marchio': '',
+            'sottomarchio': '',
+            'mondo': '',
+            'regione': '',
+            'tag': ''
+        },
+        'prodotti': {
+            'regione': '',
+            'tag': ''
+        }
+    };
+</script>
+</head>
+
+<body>
+    <div class="body_wrapper clearfix ">
+        
+<div class="sticky-container ">
+	
+    <div class="container-large header-wrapper">
+        <header role="banner">
+            <div class="container main-header">
+                <div class="hamburger hamburger--spin toggle-menu">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9 position-inherit">
+                        <div class="main-header__logo">
+                            <a href="https://www.conad.it/" itemprop="url" class="logo" alt="">
+                                <img itemprop="logo" src="https://www.conad.it/etc/designs/conad_main/clientlib-css/img/logo.png" alt="">
+                                <span>Conad</span>
+                            </a>
+                        </div>
+                        <!-- /main-header__logo -->
+                        <ul class="main-header__menu">
+                            <li><a href="/nostri-prodotti.html">I Nostri Prodotti</a></li>
+                            <li><a href="/ricerca-negozi.html" class="current">Negozi e Volantini</a></li>
+                            <li><a href="/servizi.html">Servizi</a></li>
+                            <li><a href="/carte-e-premi.html">Carte e Premi</a></li>
+                        </ul>
+                        <div class="main-header__search hidden-sm hidden-xs">
+                            <div id="sb-search-sticky" class="sb-search">
+                                <form action="/risultati.html" method="GET">
+                                    <input class="sb-search-input" placeholder="Cerca nel sito" type="text" value="" name="search" id="search" tabindex="-1">
+                                    <input class="sb-search-submit" type="submit" value="Cerca" tabindex="-1">
+                                    <span class="sb-icon-search"></span>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /main-header__search -->
+                    </div>
+                    <!-- /col-md-9 -->
+                    
+                    <!-- /box-access -->
+                    
+                        <div class="box-access box-access-large">
+                            <ul class="menu-access">
+                                <li><a href="/login.html">Accedi</a></li>
+                                <li><a href="/registrazione.html">Registrati</a></li>
+                            </ul>
+                        </div>
+                    
+                    <!-- /box-access -->
+                </div><!-- /row -->
+            </div><!-- /main-header -->
+        </header>
+    </div>
+    <!-- /header-wrapper -->
+    <div class="header-menu-mobile">
+        <div class="menu-mobile-scrollbar">
+            <div class="form-search-shop-menu">
+                <form action="/risultati.html" method="GET">
+                    <input class="form-control" placeholder="Cerca nel sito" id="location-input-mobile" name="search" type="text" onclick="select()">
+                    <input value="" type="submit">
+                </form>
+            </div><!-- /form-search-shop-menu -->
+            <div class="main-header__menu-transport">
+            </div>
+            
+            <div class="location">
+                <div class="box-access-shop">
+                    <img src="https://www.conad.it/etc/designs/conadfoundation/clientlib-css/img/pin_arancione.svg" alt="">
+                    <h3><a href="/ricerca-negozi/negozio.008411.html">Conad City</a></h3>
+                    <p>Via G. Oberdan 37, Bologna (BO)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+        <div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+    
+<div class="shop-details-right-transport"></div>
+<div class="section__wrapper container">
+    <div class="search-shop-large search-shop-large-mobile">
+        <div class="row">
+            <div class="col-md-2 text-center hidden-xs hidden-sm">
+                <img class="icon" src="https://www.conad.it/etc/designs/conadfoundation/clientlib-css/img/Icona_negozio.svg" alt="">
+            </div>
+            <div class="col-md-10">
+                <div class="row hidden-xs hidden-sm">
+                    <div class="col-xs-3 text-center icon-transport hidden-md hidden-lg">
+                    </div>
+                    <div class="col-md-12 col-xs-9">
+                        <p>Cerca il tuo <strong>negozio</strong> e scopri il <strong>volantino</strong>, le <strong>offerte</strong> e i <strong>servizi</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="section__wrapper container-large">
+    <div class="container container-shop" id="viewer-container">
+    <iframe src="about:blank" frameborder="0" width="100%" height="100%" allow="geolocation"></iframe>
+    </div><!-- /container -->
+</div><!-- /container-large -->
+
+<div class="section__wrapper container-large">
+    <div class="container">
+        
+            <div class="section__title">
+    <h2>La tua convenienza di ogni giorno</h2>
+</div>
+<div class="poster-container">
+    <img src="https://www.conad.it/content/dam/conad/conad-consumer/pdv/banner-essentiae-pdv.jpg">
+</div>
+<div class="clearfix text-center margin-bottom-40">
+    <a class="btn btn-default btn-xs padding-left-20 padding-right-20" href="https://www.conad.it/contenuti/consumer-mondi_essentiae.html">Scopri tutta la linea</a>
+</div>
+        
+        
+            <div class="section__title">
+                <h2>Vantaggi Carta Insieme</h2>
+            </div>
+            
+            
+                <div class="owl-carousel carousel-theme carousel-box-simple">
+                    <div class="item">
+                        <div class="box box--simple">
+                            <a class="link-wrapper" href="https://www.conad.it/Landing-Page/Borbonese.html">
+                                <div class="box--simple__thumb">
+                                    <img src="https://www.conad.it/content/dam/conad/conad-consumer/promozioni/borbonese/borbonese-banner-vantaggi-carta-insieme-4.svg" alt="">
+                                </div><!-- /box--simple__thumb -->
+                                <div class="box--simple__content">
+                                    <h3>Imperdibile collezione Borbonese</h3>
+                                    <p>Dall’11 giugno al 23 settembre torna l’eleganza di Borbonese in una collezione ricca di morbidi dettagli. Non fartela scappare!</p>
+                                </div><!-- /box--simple__content -->
+                            </a>
+                        </div><!-- /box--simple -->
+                    </div><!-- /item -->
+                
+                    <div class="item">
+                        <div class="box box--simple">
+                            <a class="link-wrapper" href="https://www.conad.it/prenotazione-libri-testo">
+                                <div class="box--simple__thumb">
+                                    <img src="https://www.conad.it/content/dam/conad/conad-consumer/promozioni/libri-di-testo/libriditesto-banner-496x366.jpg" alt="">
+                                </div><!-- /box--simple__thumb -->
+                                <div class="box--simple__content">
+                                    <h3>PRENOTA I LIBRI DI TESTO</h3>
+                                    <p>Dal 1° giugno prenota i libri da noi, ti restituiremo il 25% in buoni spesa</p>
+                                </div><!-- /box--simple__content -->
+                            </a>
+                        </div><!-- /box--simple -->
+                    </div><!-- /item -->
+                
+                    <div class="item">
+                        <div class="box box--simple">
+                            <a class="link-wrapper" href="http://mipremio.conad.it/">
+                                <div class="box--simple__thumb">
+                                    <img src="https://www.conad.it/content/dam/conad/conad-consumer/carte-e-premi/mipremio/banner-catalogo-mipremio.jpg" alt="">
+                                </div><!-- /box--simple__thumb -->
+                                <div class="box--simple__content">
+                                    <h3>Grande catalogo miPREMIO 2018</h3>
+                                    <p>Sfoglia e scopri il catalogo miPREMIO 2018</p>
+                                </div><!-- /box--simple__content -->
+                            </a>
+                        </div><!-- /box--simple -->
+                    </div><!-- /item -->
+                
+                    <div class="item">
+                        <div class="box box--simple">
+                            <a class="link-wrapper" href="/servizi/la-prepagata-conad.html">
+                                <div class="box--simple__thumb">
+                                    <img src="https://www.conad.it/content/dam/conad/conad-consumer/carte-e-premi/mi-premio-volantino-conad.jpg/la-prepagata-conad.jpeg" alt="">
+                                </div><!-- /box--simple__thumb -->
+                                <div class="box--simple__content">
+                                    <h3>Prepagata Conad</h3>
+                                    <p>Il regalo facile per chi lo fa e utile per chi lo riceve.</p>
+                                </div><!-- /box--simple__content -->
+                            </a>
+                        </div><!-- /box--simple -->
+                    </div><!-- /item -->
+                
+                    <div class="item">
+                        <div class="box box--simple">
+                            <a class="link-wrapper" href="/servizi/servizi-assicurativi.html">
+                                <div class="box--simple__thumb">
+                                    <img src="https://www.conad.it/content/dam/conad/conad-consumer/carte-e-premi/servizi-assicurativi.jpg" alt="">
+                                </div><!-- /box--simple__thumb -->
+                                <div class="box--simple__content">
+                                    <h3>Servizi Assicurativi</h3>
+                                    <p>Scopri la carta vincente per risparmiare sulle tue assicurazioni</p>
+                                </div><!-- /box--simple__content -->
+                            </a>
+                        </div><!-- /box--simple -->
+                    </div><!-- /item -->
+                </div><!-- /carousel-box-simple -->
+            
+        
+    </div><!-- /container -->
+</div><!-- /container-large -->
+        <footer role="contentinfo" id="footer" class="footer">
+    <div class="section"><div class="new"></div>
+</div><div class="iparys_inherited"><div class="footer_ipar iparsys parsys"><div class="footer_selector section"><div class="section__wrapper container-large container-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="logo-footer-container">
+                    <a href="javascript:void(0);" class="logo-footer">
+                        <img src="https://www.conad.it/etc/designs/conad_main/clientlib-css/img/logo-simple.png">
+                        <span>CONAD SOC. COOP.</span>
+                    </a>
+                    <p>Via Michelino, 59 | 40127 BOLOGNA</p>
+                    <small>Codice Fiscale e Registro Imprese<br />
+di Bologna 00865960157<br />
+PARTITA IVA 03320960374</small>
+                    <small class="uppercase hidden-sm hidden-xs">CONAD SOC. COOP.</small>
+                </div>
+                <!-- /logo-footer-container -->
+            </div>
+            <!-- /col-md-3 -->            
+            <div class="col-md-3">
+                <div class="box box--footer box--footer__accordion">
+                    <div class="box--footer__title">
+                        <h3 class="title-accordion">Link Utili</h3>
+                        <span></span>
+                    </div>
+                    <!-- /box--footer__title -->
+                    <ul>
+                        <li>
+                            <a href="/news.html">Notizie</a>
+                        </li>
+                        <li>
+                            <a href="http://www.conad.it/conad/home/global/chi-siamo/lavoraconnoi.html">Lavora con noi</a>
+                        </li>
+                        <li>
+                            <a href="/Landing-Page/Borbonese.html">Borbonese</a>
+                        </li>
+                        <li>
+                            <a href="https://www.insiemeperlascuola.it/2018/index.php">Insieme per la scuola</a>
+                        </li>
+                        <li>
+                            <a href="http://mipremio.conad.it">miPremio</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /box--footer -->                
+            </div>
+            <!-- /col-md-3 -->
+			<div class="col-md-3">
+                <div class="box box--footer box--footer__accordion">
+                    <div class="box--footer__title">
+                        <h3 class="title-accordion">Il mondo Conad</h3>
+                        <span></span>
+                    </div>
+                    <!-- /box--footer__title -->
+                    <ul>
+                        <li>
+                            <a href="https://chisiamo.conad.it/">Chi siamo</a>
+                        </li>
+                        <li>
+                            <a href="https://chisiamo.conad.it/">Le Cooperative</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </div>
+                <!-- /box--footer -->
+            </div>
+            <!-- /col-md-3 -->
+            <div class="col-md-3 box-footer-mobile">
+                <div class="box box--footer">
+                    <div class="box--footer__title">
+                        <h3>Newsletter</h3>
+                    </div>
+                    <!-- /box--footer__title -->
+                    <a class="btn btn-default btn-xs btn-block" href="/registrazione.html">Iscriviti alla newsletter</a>
+                    <div class="box--footer__title">
+                        <h3>Servizio Clienti</h3>
+                    </div>
+                    <!-- /box--footer__title -->
+                    <a class="btn btn-default btn-xs btn-block" href="/servizio-clienti.html">Vai al servizio</a>
+                </div>
+                <!-- /box--footer -->
+            </div>
+            <!-- /col-md-3 -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+    <hr class="hidden-sm hidden-xs">
+    <div class="container subfooter">
+        <div class="row">
+            <div class="col-md-3">
+                <p>Copyright @ Conad 2017</p>
+            </div>
+            <!-- /col-md-3 -->
+            <div class="col-md-6">
+                <div class="subfooter-links">
+                    <a href="/it.html">Home</a>
+                    
+                    <a href="/content/dam/conad/conad-consumer/INFORMATIVA%20SUL%20TRATTAMENTO%20DEI%20DATI%20DA%20PARTE%20DI%20CONAD%20GDPR.pdf">Privacy</a>
+                    <a href="/cookie-policy.html">Cookie</a>
+                </div>
+            </div>
+            <!-- /col-md-6 -->
+            <div class="col-md-3">
+                <div class="subfooter-social">
+                    <a href="https://www.facebook.com/Conad/?fref=ts">
+                        <img src="https://www.conad.it/etc/designs/conad_main/clientlib-css/img/icona_facebook.svg" alt="">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC0pjS6lNq1yvANCAMEpFnPQ">
+                        <img src="https://www.conad.it/etc/designs/conad_main/clientlib-css/img/icona_youtube.svg" alt="">
+                    </a>
+                    <a href="https://twitter.com/conad">
+                        <img src="https://www.conad.it/etc/designs/conad_main/clientlib-css/img/icona_twitter.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- /col-md-3 -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /container-large --></div>
+</div>
+</div>
+
+</footer>
+        
+        <input type="hidden" value="eyJsaW5rcyI6W10sIm1vZGFsaXRhIjoiIn0=" id="mondi-switch-hashInfo"/>
+    </div>
+    
+    
+<!-- <script type="text/javascript" src="https://www.conad.it/etc/clientlibs/granite/utils.js"></script> -->
+<!-- <script type="text/javascript" src="https://www.conad.it/etc/clientlibs/foundation/jquery.js"></script> -->
+<script type="text/javascript" src="https://www.conad.it/etc/designs/conadfoundation/jquery.js"></script>
+
+
+
+
+    
+<script type="text/javascript" src="https://www.conad.it/etc/designs/conadfoundation/plugins.js"></script>
+
+
+
+
+    
+<script type="text/javascript" src="https://www.conad.it/etc/designs/conadfoundation/store.js"></script>
+
+
+
+
+    
+<script type="text/javascript" src="https://www.conad.it/etc/designs/conadfoundation/functions.js"></script>
+
+
+
+
+    
+<script type="text/javascript" src="https://www.conad.it/etc/designs/conad_main/clientlib-mondi-js.js"></script>
+
+
+
+
+<script>
+    dataLayer = [{
+        'userId': '',
+        'codiceCartaInsieme': '',
+        'codiceCartaInsiemePiu': '',
+        'negozioPreferito': '',
+        'cooperativa': '',
+        'ean': '',
+        'idNegozio': '008411'
+    }];
+</script>
+    
+    
+<script type="text/javascript" src="https://www.conad.it/etc/designs/conadfoundation/validation.js"></script>
+<script type="text/javascript" src="https://www.conad.it/etc/designs/conad_main/scripts-locator.js"></script>
+
+
+
+<div data-remodal-id="modal" id="remodal-error">
+    <p class="remodal-text"></p>
+</div>
+
+</body>
+
+</html>

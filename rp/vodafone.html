@@ -11,17 +11,18 @@
       <script type="text/javascript" src="//www.vodafone.com.au/cs/static/js/vha_analytics.js"></script>
       <script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script>
       <script type="text/javascript" src="https://www.vodafone.com.au/sites/static/js/cludo-config.js"></script>
+      
       <!--       <meta name="format-detection" content="telephone=no"> -->
       <link type="image/x-icon" href="https://www.vodafone.com.au/cs/static/mm/img/favicon.ico" rel="shortcut icon">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
       <style>
-         .viewer-container {
+         #viewer-container {
          margin: 0 auto;
          max-width: 960px;
-         height: 384px;
+         height: 475px;
          }
          @media screen and (min-width: 768px) {
-         .viewer-container {
+         #viewer-container {
          height: 750px;
          }
          }
@@ -254,8 +255,48 @@
          </div>
       </div>
       <div id=spl-nav-wrapper>
-         <div class="viewer-container"> 
-            <iframe src="https://stg-viewer-whitelabel.geniale.com/flyers?language=en_au&propertyId=5af04039-84d4-46b3-a3c5-6b130a65031e" frameborder="0" width="100%" height="100%" allow="geolocation"></iframe>
+      	<script>
+      	<!-- PROOF OF CONCEPT: handling deeplinking to the viewer -->
+      	var iframe_container_id = "viewer-container";
+      	var language = "en_au";
+      	var property_id = "5af04039-84d4-46b3-a3c5-6b130a65031e";
+      	var params_prefix = "sfb.";
+      	
+		var route = "flyers";
+		document.addEventListener('DOMContentLoaded', function() {
+			var container = document.getElementById(iframe_container_id);
+			var iframe = container.getElementsByTagName("iframe")[0]
+			var URL = window.location.href;
+			// parse URL params -> shitty and fragile code for the POC
+			if (URL && URL.includes('?') && URL.includes('&')) {
+				var params = URL.split('?')[1].split('&');
+				var params_map = []
+				for (var i = 0; i < params.length; i++) {
+						var split = params[i].split('=');
+						if (split[0].startsWith(params_prefix)) {
+							var key = split[0].substr(params_prefix.length);
+							params_map[key] = split[1];
+						}
+				}
+				if ('route' in params_map && params_map.route != undefined) {
+					//add route validation
+					route = params_map.route;
+					delete params_map['route'];
+				}
+			}
+			var other_params = 'language=' + language + '&propertyId=' + property_id + '&';
+			if(params_map) {
+				for(key in params_map){
+					other_params += key + '=' + params_map[key] + '&';
+				}
+			}
+			var src = 'https://stg-viewer-whitelabel.geniale.com/' + route + '?' + other_params;
+			console.log(src);
+			iframe.src = src;
+		});
+      </script>
+         <div id="viewer-container">
+            <iframe src="about:blank" frameborder="0" width="100%" height="100%" allow="geolocation"></iframe>
          </div>
       </div>
       <div id="spl-footer" role="navigation">
