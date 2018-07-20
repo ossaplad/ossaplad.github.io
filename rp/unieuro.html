@@ -172,14 +172,180 @@
                 </style>
             </p>
 
-            <header class="header header-sticky-banner">
+            <!-- <div class="sticky-banner desktop">
+                <div class="first-row">
+                    <p class="text blue uppercase">10% EXTRA SCONTO</p>
+                </div>
+                <div class="second-row">
+                    <p class="text">sui grandi elettrodomestici direttamente in carrello</p>
+                </div>
+            </div>
+
+            <div class="sticky-banner mobile">
+                <div>
+                    <div class="first-row">
+                        <p class="text blue uppercase">10% EXTRA SCONTO</p>
+                    </div>
+                    <div class="second-row">
+                        <p class="text">sui grandi elettrodomestici direttamente in carrello</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <header class="header header-sticky-banner" style="top: 0px;">
+                <section class="search-elements">
+                    <span class="search-box">
+                        <div class="search-container" data-module="instantsearch" data-instantsearch-handler=".search--handler" data-instantsearch-index="sgmproducts_prod" data-instantsearch-autocomplete="sgmanalytics_prod" data-instantsearch-editorialindex="unibannercomponents_prod">
+
+                            <div class="mobile-search">
+                                <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input class="algolia-search-input search--handler aa-input" id="algolia-mobile-search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" placeholder="Trova per prodotto, modello, brand" role="combobox" aria-autocomplete="both" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Montserrat, sans-serif; font-size: 11px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="aa-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;"><div class="aa-dataset-1"></div></span></span>
+                                <div id="recent-list-search" class="panel slide-top" data-module="panel" data-panel-backdrop="false" data-panel-effect="slide-top"></div>
+                            </div>
+
+                            <div class="desktop-search">
+                                <input class="algolia-search-input" id="algolia-desktop-search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" placeholder="Trova per prodotto, modello, brand">
+                            </div>
+                        </div>
+                    </span>
+                </section>
                 <section class="header-elements">
                     <span class="logo">
                         <span>
                             <a href="/online/"><img src="https://static1.unieuro.it/medias/sys_master/root/h51/hff/11022843052062/logo-unieuro.png" width="180px" height="45px" alt="Unieuro" title="Unieuro" /></a>
                         </span>
                     </span>
-                    <span class="sub-header">
+                    <span class="action-icon-container">
+                        <div id="miniwishlist-ajax" class="hide">
+                            <div class="icon-wishlist wishlist--handler">
+                                <span class="quantity"></span>
+                                <i class="divider"></i>
+                                <span class="header-icon-text">Wishlist</span>
+                            </div>
+
+                            <div class="wishlist panel fade wishlist-fade" data-module="wishlist panel" data-wishlist-main="true" data-wishlist-quantity="0" data-panel-groups="header" data-panel-backdrop="false" data-panel-effect="wishlist-fade" data-wishlist-handler=".wishlist--handler" data-panel-closeonclick="true">
+
+                                <div class="wishlist-header">
+                                    <div class="arrow"></div>
+                                    <header>
+                                        <a href="/online/my-account/wishlist">lista dei <span>desideri</span></a>
+                                    </header>
+                                </div>
+
+                                <div class="wishlist-response-message"></div>
+                                <div class="wishlist-empty ">
+                                    <hr>
+                                    <div class="message">
+                                        Non hai prodotti nella lista dei desideri
+                                    </div>
+                                    <div class="promo-banner">
+                                        Per aggiungerli, vai in una scheda o anteprima prodotto e clicca su: <b>Aggiungi alla lista dei desideri</b>
+                                    </div>
+                                </div>
+                                <div class="wishlist-full hide">
+                                    <div class="wishlist--list" data-module="iscroll">
+                                        <div>
+                                            <div style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="promo-banner">
+                                        <span class="js--add-to-cart-all">converti questa lista in carrello</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="minilogin-ajax">
+                            <div class="icon-account-container">
+                                <i class="divider"></i>
+                                <span class="btn-account account--handler">
+                                    <span class="header-icon-text">Accedi</span>
+                                </span>
+                            </div>
+                            <div class="account panel nologged account-fade" data-module="login panel" data-login-main="true" data-panel-groups="header" data-panel-backdrop="false" data-panel-effect="account-fade" data-login-handler=".account--handler" data-panel-closeonclick="true">
+                                <div class="account-nologged ">
+                                    <div class="no-wishlist hide">
+                                        <span><strong>Registrati</strong></span> o 
+                                        <span><strong>accedi</strong></span> al sito per aggiungere i tuoi prodotti alla 
+                                        <span class="icon-wishlist"></span>
+                                        <span>lista dei desideri</span>.
+                                    </div>
+                                    <div class="arrow"></div>
+                                    <div class="account-register">
+                                        <header>Registrati</header>
+                                        <hr>
+                                        <div class="message">
+                                            Registrati per ottimizzare la tua esperienza d'acquisto
+                                        </div>
+                                        <ul class="description">
+                                            <li>- Procedimento di checkout più rapido</li>
+                                            <li>- Storia dei tuoi ordini</li>
+                                            <li>- Tracciabilità dei tuoi acquisti</li>
+                                            <li>- Gestione dei tuoi indirizzi</li>
+                                            <li>- Salvataggio dei prodotti nella tua lista dei desideri</li>
+                                        </ul>
+                                        <a href="/online/register" class="btn btn-blue-light">Registrati</a>
+                                    </div>
+                                    <div class="account-login">
+                                        <header>
+                                            Log <span>in</span>
+                                        </header>
+                                        <hr>
+                                        <div class="message">
+                                            Effettua il login per accedere ai tuoi servizi
+                                        </div>
+                                        <form class="form-login has-validation-callback" action="https://www.unieuro.it/online/j_spring_security_check" method="post" data-module="forms" data-scrolltop="false">
+                                            <div class="form-group has-success">
+                                                <input type="email" class="email valid" name="j_username" placeholder="Inserisci la tua mail" data-validation="required email" data-validation-error-msg-required="Campo obbligatorio" data-validation-error-msg-email="Formato e-mail non valido">
+                                            </div>
+                                            <div class="form-group has-success">
+                                                <input type="password" class="password valid" name="j_password" placeholder="Password" data-validation="required" data-validation-error-msg-required="Campo obbligatorio">
+                                            </div>
+
+                                            <span class="info-password"><a href="/online/login/pw/request">Password dimenticata?</a></span>
+                                            <span class="remember-credential">
+                                                <input type="checkbox" id="spring_security_remember_me" name="_spring_security_remember_me">
+                                                <label for="spring_security_remember_me">Memorizza i dati per il prossimo accesso</label>
+                                            </span>
+                                            <input type="submit" value="Accedi" class="btn btn-blue-normal">
+                                        </form>
+                                        <header class="header-social">oppure</header>
+                                        <div class="login-container-social" data-module="sociallogin" data-sociallogin-fb="1729027357314498" data-sociallogin-gplusid="902448158139-k8e21ppf9fi02nltag271dueucojcva4.apps.googleusercontent.com" data-sociallogin-gplussecret="-UOULuiTOgK8lDDNoaA6mHAS">
+                                            <a href="#" name="fb-login" title="Facebook">
+                                                <img src="https://static3.unieuro.it/online/_ui/desktop/theme-Unieuro-restyling/dist/images/social/fb-login.png"></a>
+                                            <div class="g-signin2" data-onsuccess="onSignIn" style="display: none;"></div>
+                                            <a href="#" name="gp-login" title="Google plus"><img src="https://static2.unieuro.it/online/_ui/desktop/theme-Unieuro-restyling/dist/images/social/googleSignin.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="account-logged  hide ">
+                                    <div class="arrow"></div>
+                                    <header>
+                                        ciao <span>anonymous</span>
+                                    </header>
+                                    <hr>
+                                    <div class="account-container-element">
+                                        <a href="/online/my-account/orders" title="I miei ordini">I miei ordini</a>
+                                        <a href="/online/my-account/profile" title="Il mio profilo">Il mio profilo</a>
+                                        <a href="/online/my-account/update-privacy" title="La mia privacy">La mia privacy</a>
+                                    </div>
+                                    <a href="/online/logout?_=2018-07-20-52-19-713" class="btn btn-blue-normal">Esci</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon-locator-container">
+                            <i class="divider"></i>
+                            <a href="/online/negozi">
+                                <span class="header-icon-text">Store</span>
+                            </a>
+                        </div>
+                        <div class="icon-locator-container">
+                            <i class="divider"></i>
+                            <a href="/online/negozi">
+                                <span class="header-icon-text">Carrello</span>
+                            </a>
+                        </div>
+                    </span>
+                    <!-- <span class="sub-header">
                         <span class="hamburger--container ">
                             <span class="hamburger hamburger--spin" data-module="hamburger" data-hamburger-target="#side-menu">
                                 <span class="hamburger-box">
@@ -188,7 +354,7 @@
                             <span class="hamburger-text-open">Menu</span>
                             <span class="hamburger-text-close">Chiudi</span>
                         </span>
-                    </span>
+                    </span> -->
 
                     <nav data-module="panel" data-panel-effect="slide-left" data-panel-groups="header" data-panel-backdrop="true" id="side-menu" class="panel hide ">
 
@@ -873,7 +1039,7 @@
                 </div>
             </div>
 
-            <div class="container header-sticky-banner">
+            <div class="container header-sticky-banner" style="margin-top: 70px;">
                 <div id="breadcrumb" class="breadcrumb">
                     <section class="breadcrumbs">
                         <span><a href="/online/">Home</a></span>/
