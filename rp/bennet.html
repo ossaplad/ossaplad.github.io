@@ -1,0 +1,602 @@
+<!doctype html>
+<html class="no-js">
+    <head id="ctl00_Head1"><meta charset="utf-8" /><meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Promozioni in corso | Ipermercati Bennet</title>
+        <meta name="description" content="Catena di supermercati per il commercio al dettaglio di alimentari, in Lombardia, Piemonte, Veneto ed Emilia Romagna." />
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700" />
+        <link href="https://www.bennet.com/resources/css/allCss?v=4kXR2QFo2qcivAuJbbzQevxHjkHnA6ZvaeT-2S9wgYU1" rel="stylesheet"/>
+
+        <script src="https://www.bennet.com/resources/scripts/modernizr.js"></script>
+        <!--[if lt IE 9]><script src="../resources/scripts/ie/respond.min.js"></script><![endif]-->
+
+        <style>
+            #framecontainer {
+                margin: 0 auto;
+                max-width: 960px;
+                height: 555px;
+            }
+            @media screen and (min-width: 768px) {
+                #framecontainer {
+                    height: 700px;
+                }
+            }
+            /*top menu*/
+            @media screen and (min-width: 1024px){
+                nav#nav-primary a:link {
+                    padding: 20px 5px;
+                }
+            }
+            @media screen and (min-width: 1200px){
+                nav#nav-primary a:link {
+                    padding: 20px 8px;
+                }
+            }
+        </style>
+
+    </head>
+
+    <body id="elencoPromozioni">
+
+        <form name="aspnetForm" method="post" action="./elencoPromozioni.aspx?oldPromo=1" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+
+            <header role="banner">
+                <div class="row collapse large-no-collapse">
+                    <div class="cols xsmall xsmall1 medium2 large4 xlarge3">
+                        <h1><a href="/">Bennet</a></h1>
+                    </div>
+                    <div class="cols xsmall xsmall4 medium22 hide-large-up aright">
+                        <nav id="nav-mobile">
+                            <ul>
+                                <li class="hide"><a href="#"><span class="fa fa-search fa-2x"></span></a></li>
+                                <li><a id="navigation-handle" href="#"><span class="fa fa-bars fa-2x"></span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div id="navigation" class="cols xsmall xsmall5 medium24 large20 xlarge21">
+                        <nav role="navigation" id="nav-primary">
+                            <ul>
+                                <li class="nav-icon-register hide-large-up"><a href="/ilTuoBennet/registrazione.aspx"><span class="hide-large-up">Registrati</span></a></li>
+                                <li class="nav-icon-login hide-large-up"><a href="/ilTuoBennet/accedi.aspx"><span class="hide-large-up">Accedi</span></a></li>
+                                <li class="nav-icon-customercare"><a href="/ipermercati/servizioclienti.aspx">Servizio clienti</a></li>
+                                <li>
+                                    <a href="#">Promozioni</a>
+                                    <div class="dropdown" style="display: none;">
+                                        <nav>
+                                            <ul>
+                                                <li class=""><a href="/promozioni/elencoPromozioni.aspx">Promozioni in Corso</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">BennetDrive</a>
+                                    <div class="dropdown" style="display: none;">
+                                        <nav>
+                                            <ul>
+                                                <li class=""><a href="/azienda/bennetDrive-scopri.aspx">Scopri BennetDrive</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Punti Vendita</a>
+                                    <div class="dropdown" style="display: none;">
+                                        <nav>
+                                            <ul>   
+                                                <li class="show-medium-up"><a href="/ipermercati/cercaIpermercato.aspx?ric=1">Cerca Punto Vendita</a></li>
+                                                <li class="hide-medium-up"><a href="/ipermercati/cercaIpermercato.aspx?ric=2">Cerca Punto Vendita</a></li>
+                                                <li class=""><a href="/ipermercati/orariAperture.aspx">Orari e Aperture</a></li>
+                                                <li class="blank"><a href="http://www.galleriecommercialibennet.com">Gallerie commerciali</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">L'azienda</a>
+                                    <div class="dropdown" style="display: none;">
+                                        <nav>
+                                            <ul>   
+                                                <li class=""><a href="/azienda/chiSiamo.aspx">Chi Siamo</a></li>
+                                                <li class=""><a href="/azienda/CodiceEticoModelloOrganizzativo.aspx">Codice etico</a></li>
+                                                <li class=""><a href="/azienda/iniziative.aspx">Iniziative</a></li>
+                                                <li class=""><a href="/azienda/serviziPerTe/serviziPerTe.aspx">Servizi per Te</a></li>
+                                                <li class=""><a href="/azienda/prodottiBennet.aspx">Prodotti Bennet</a></li>
+                                                <li class=""><a href="/azienda/alimentiSenzaGlutine.aspx">Alimenti Senza Glutine</a></li>
+                                                <li class=""><a href="/azienda/socioCPR.aspx">Socio CPR</a></li>
+                                                <li class=""><a href="/azienda/contatti.aspx">Contatti</a></li>
+                                                <li class=""><a href="/azienda/lavoraConNoi.aspx">Lavora con Noi</a></li>
+                                                <li class=""><a href="/azienda/avvisiRichiamoProdotti.aspx">Richiamo prodotti</a></li>
+                                                <li class=""><a href="/azienda/pressArea.aspx">Area Stampa</a></li>
+                                                <li class=""><a href="/azienda/taxFree.aspx">Tax Free</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Bennet Club</a>
+                                    <div class="dropdown" style="display: none;">
+                                        <nav>
+                                            <ul>   
+                                                <li class=""><a href="/bennetClub/bennetClub.aspx">Scopri Bennet Club</a></li>
+                                                <li class=""><a href="/bennetClub/carteBennet/carteBennetClub.aspx">Carta Bennet Club</a></li>
+                                                <li class=""><a href="/bennetClub/raccoltaPunti/sfogliaCatalogoMobile.aspx">Catalogo Premi</a></li>
+                                                <li class=""><a href="/bennetClub/raccoltaPunti/ricercaPremio.aspx">Ricerca Premio</a></li>
+                                                <li class=""><a href="/bennetClub/raccoltaPunti/premiOnlineRichiedi.aspx">Richiedi Premi Online</a></li>
+                                                <li class=""><a href="/bennetClub/disabbinamentoDonazionepunti.aspx">Donazione Punti</a></li>
+                                                <li class=""><a href="/bennetClub/raccoltaPunti/regolamento.aspx">Regolamento</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </li>
+                                <li class="nav-icon-register show-large-up"><a href="/ilTuoBennet/registrazione.aspx"><span class="show-xlarge">Registrati</span></a></li>
+                                <li class="nav-icon-login show-large-up"><a href="/ilTuoBennet/accedi.aspx"><span class="show-xlarge">Accedi</span></a></li>
+                                <li>
+                                    <div class="show-large-up" id="box-galleriecommerciali">
+                                        <a href="http://www.galleriecommercialibennet.com/" target="_blank"> <span>  Gallerie Commerciali Bennet </span> </a>
+                                    </div>
+                                    <a class="hide-large-up" href="http://www.galleriecommercialibennet.com/" target="_blank"> Gallerie Commerciali Bennet </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div id="nav-search" class="hide">
+                            <input name="ctl00$TopMenu$iSearch" type="text" id="ctl00_TopMenu_iSearch" placeholder="Cerca nel sito..." class="form-control" />
+                        </div>
+                        <nav id="nav-secondary">
+                            <ul>
+                                <li id="home"><a href="/">Home</a></li>
+                                <li id="perte">
+                                    <a href="#">Per te</a>
+                                    <div class="dropdown" style="display: none">
+                                        <div class="row no-collapse">
+                                            <div class="cols medium24 large6 xlarge8 dropdown-title">
+                                                <h2><a href="/editoriale/editorialeCategoria.aspx?ec=1">Relax e coccole per un momento solo tuo <span>Vai alla sezione &raquo;</span></a></h2>
+                                            </div>
+                                            <div class="cols medium24 large18 xlarge16 separator">
+                                                <ul class="list-cols medium-list-cols3">
+                                                    
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=1&e=717">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/717_ed_menu.jpg" /></figure>
+                                                            I superfood
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=1&e=716">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/716_ed_menu.jpg" /></figure>
+                                                            Le alternative al gelato: il Nana ice-cream
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=1&e=715">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/715_ed_menu.jpg" /></figure>
+                                                            Pancakes al cacao con crema veg al cioccolato
+                                                        </a>
+                                                    </li>
+                                                        
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="cucina">
+                                    <a href="#">In cucina</a>
+                                    <div class="dropdown" style="display: none">
+                                        <div class="row no-collapse">
+                                            <div class="cols medium24 large6 xlarge8 dropdown-title">
+                                                <h2><a href="/editoriale/editorialeCategoria.aspx?ec=2">Convivialità, suggerimenti, idee in cucina <span>Vai alla sezione &raquo;</span></a></h2>
+                                            </div>
+                                            <div class="cols medium24 large18 xlarge16 separator">
+                                                <ul class="list-cols medium-list-cols3">
+                                                    
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=2&e=720">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/720_ed_menu.jpg" /></figure>
+                                                            Penne con zucchine e ricottina light buone da star bene
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=2&e=721">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/721_ed_menu.jpg" /></figure>
+                                                            Pizza con pesto e pomodorini buona da Star Bene
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=2&e=722">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/722_ed_menu.jpg" /></figure>
+                                                            Tiramisù Buono da Star Bene
+                                                        </a>
+                                                    </li>
+                                                        
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="coppia">
+                                    <a href="#">In coppia</a>
+                                    <div class="dropdown" style="display: none">
+                                        <div class="row no-collapse">
+                                            <div class="cols medium24 large6 xlarge8 dropdown-title">
+                                                <h2><a href="/editoriale/editorialeCategoria.aspx?ec=3">Per vivere al meglio le occasioni a due <span>Vai alla sezione &raquo;</span></a></h2>
+                                            </div>
+                                            <div class="cols medium24 large18 xlarge16 separator">
+                                                <ul class="list-cols medium-list-cols3">
+                                                    
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=3&e=714">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/714_ed_menu.jpg" /></figure>
+                                                            Friendzone: come capire se è amore o “solo” amicizia
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=3&e=707">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/707_ed_menu.jpg" /></figure>
+                                                            Workation: quando un partner lavora e l’altro è in vacanza
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=3&e=702">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/702_ed_menu.jpg" /></figure>
+                                                            Shooting fotografico di coppia
+                                                        </a>
+                                                    </li>
+                                                        
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="ariaaperta">
+                                    <a href="#">All'aria aperta</a>
+                                    <div class="dropdown" style="display: none">
+                                        <div class="row no-collapse">
+                                            <div class="cols medium24 large6 xlarge8 dropdown-title">
+                                                <h2><a href="/editoriale/editorialeCategoria.aspx?ec=4">Al parco, in montagna o sul terrazzo: la parola d’ordine è “all’aperto” <span>Vai alla sezione &raquo;</span></a></h2>
+                                            </div>
+                                            <div class="cols medium24 large18 xlarge16 separator">
+                                                <ul class="list-cols medium-list-cols3">
+                                                    
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=4&e=723">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/723_ed_menu.jpg" /></figure>
+                                                            Le energie del bosco: passeggiate rigeneranti tra gli alberi
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=4&e=712">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/712_ed_menu.jpg" /></figure>
+                                                            Nordic Walking
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=4&e=709">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/709_ed_menu.jpg" /></figure>
+                                                            Torneo di beach volley
+                                                        </a>
+                                                    </li>
+                                                        
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="amici">
+                                    <a href="#">Con gli amici</a>
+                                    <div class="dropdown" style="display: none">
+                                        <div class="row no-collapse">
+                                            <div class="cols medium24 large6 xlarge8 dropdown-title">
+                                                <h2><a href="/editoriale/editorialeCategoria.aspx?ec=5">Il bello di stare in compagnia <span>Vai alla sezione &raquo;</span></a></h2>
+                                            </div>
+                                            <div class="cols medium24 large18 xlarge16 separator">
+                                                <ul class="list-cols medium-list-cols3">
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=5&e=724">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/724_ed_menu.jpg" /></figure>
+                                                            A bordo vasca con gli amici
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=5&e=710">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/710_ed_menu.jpg" /></figure>
+                                                            In campeggio con gli amici
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=5&e=704">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/704_ed_menu.jpg" /></figure>
+                                                            Gara di cucina con gli amici
+                                                        </a>
+                                                    </li>
+                                                        
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="famiglia">
+                                    <a href="#">In famiglia</a>
+                                    <div class="dropdown" style="display: none">
+                                        <div class="row no-collapse">
+                                            <div class="cols medium24 large6 xlarge8 dropdown-title">
+                                                <h2><a href="/editoriale/editorialeCategoria.aspx?ec=6">Ogni giorno vicino a chi ci fa sentire amati <span>Vai alla sezione &raquo;</span></a></h2>
+                                            </div>
+                                            <div class="cols medium24 large18 xlarge16 separator">
+                                                <ul class="list-cols medium-list-cols3">
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=6&e=725">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/725_ed_menu.jpg" /></figure>
+                                                            Mamme a 20, 30 o 40 anni?
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=6&e=713">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/713_ed_menu.jpg" /></figure>
+                                                            Insegnare a un bimbo a lavarsi i denti
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/editoriale/editorialeArticolo.aspx?ec=6&e=711">
+                                                            <figure class="hide show-medium-up mbottom-half"><img class="img-full" src="https://www.bennet.com/resources/img/Editoriali/711_ed_menu.jpg" /></figure>
+                                                            Come stare al fresco in una casa senza condizionatore
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>   
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+
+            <main role="main">
+                <div class="row">
+                    <div class="cols medium24">
+                        <div style="position:absolute; margin:-9999px;">
+                            <img id="ctl00_ContentPlaceHolder1_rptPreviewPromoFuture_ctl00_rptCopertinaPromozioneFutura" src="https://www.bennet.com/contenuto/180726maxiscorta/gen/pagine/anteprima/01.jpg" style="border-width:0px;width:130px;" />
+                        </div>  
+                        <p class="crumbread" id="path">
+                            <span id="ctl00_ContentPlaceHolder1_SiteMapPath1">
+                                <span><a title="homePage" href="/default.aspx">Home</a></span>
+                                <span> &gt; </span>
+                                <span><a title="promozioni" href="/promozioni/promozioni.aspx">Promozioni</a></span>
+                                <span> &gt; </span>
+                                <span>Promozioni in Corso</span>
+                                <a id="ctl00_ContentPlaceHolder1_SiteMapPath1_SkipLink"></a>
+                            </span>
+                        </p>
+                        <div class="row">
+                            <div class="cols medium12">
+                                <h2 id="title-primary">Promozioni in corso</h2>
+                            </div>
+                            <div class="cols medium12 medium-aright">
+                                <script type="text/javascript" src="https://www.bennet.com/script/tooltip.js"></script>
+                                <script type="text/javascript">
+                                    function checkIpermercato()
+                                    {
+                                        var iper = document.getElementById("ctl00_ContentPlaceHolder1_UcScegliIpermercato1_ddlIpermercati")
+                                        if (iper && iper.value == '')
+                                        {
+                                            document.getElementById("ctl00_ContentPlaceHolder1_UcScegliIpermercato1_lblValidation").style.display = 'inherit';
+                                            return false;
+                                        }
+                                        return true;
+                                    }
+
+                                </script>
+                                <div class="control-group">
+                                    <select name="ctl00$ContentPlaceHolder1$UcScegliIpermercato1$ddlIpermercati" id="ctl00_ContentPlaceHolder1_UcScegliIpermercato1_ddlIpermercati" class="form-control xsmall4">
+                                    	<option value="">Seleziona ipermercato</option>
+                                    	<option value="0085">Acqui Terme (AL)</option>
+                                    	<option value="0131">Albano Sant&#39;Alessandro (BG) - Centro Commerciale Albano</option>
+                                    	<option value="0088">Alessandria Astuti (AL) - Parco Commerciale Astuti</option>
+                                    	<option value="0110">Anzano Del Parco (CO) - Centro Commerciale Il Parco</option>
+                                    	<option value="0028">Belforte Monferrato (AL) - Centro Commerciale Belforte</option>
+                                    	<option value="0045">Bellinzago Novarese (NO) - Centro Commerciale Airone</option>
+                                    	<option value="0037">Biella (BI)</option>
+                                    	<option value="0030">Brescia (BS)</option>
+                                    	<option value="0039">Brugherio (MB) - Brugherio Shopping Center</option>
+                                    	<option value="0066">Cant&#249; (CO) - Centro Commerciale Cant&#249; 2000</option>
+                                    	<option value="0132">Carmagnola (TO) - Centro Commerciale Carmagnola</option>
+                                    	<option value="0046">Casatenovo (LC)</option>
+                                    	<option value="0042">Caselle Torinese (TO) - Centro Commerciale Caselle Center</option>
+                                    	<option value="0065">Cassina Rizzardi (CO) - Centro Commerciale Monticello</option>
+                                    	<option value="0095">Castellamonte (TO) - Centro Commerciale Castellamonte</option>
+                                    	<option value="0061">Castelletto Ticino (NO) - Centro Commerciale Castelletto</option>
+                                    	<option value="0096">Castelvetro Piacentino (PC) - Centro Commerciale Verbena</option>
+                                    	<option value="0078">Cento (FE) - Centro Commerciale Guercino</option>
+                                    	<option value="0148">Chivasso (TO) - Centro Commerciale Chivasso</option>
+                                    	<option value="0055">Ciri&#232; (TO) - Centro Commerciale Le Alpi</option>
+                                    	<option value="0025">Comacchio (FE) - Centro Commerciale Le Valli</option>
+                                    	<option value="0011">Como Tavernola (CO) - Centro Commerciale Lario</option>
+                                    	<option value="0126">Cornaredo (MI)</option>
+                                    	<option value="0005">Erba (CO) - Centro Commerciale I Laghi</option>
+                                    	<option value="0018">Forlimpopoli (FC) - Centro Commerciale Le Fornaci</option>
+                                    	<option value="0111">Gavardo (BS) - Centro Commerciale La Porta del Garda</option>
+                                    	<option value="0117">Ivrea (TO)</option>
+                                    	<option value="0109">Lavena Ponte Tresa (VA)</option>
+                                    	<option value="0049">Lecco Meridiana - Centro Meridiana</option>
+                                    	<option value="0002">Legnano (MI)</option>
+                                    	<option value="0008">Lentate Sul Seveso (MB) - Centro Commerciale Lentate</option>
+                                    	<option value="0033">Montano Lucino (CO) - Centro Commerciale la Porta d&#39;Europa</option>
+                                    	<option value="0081">Mortara (PV) - Centro Commerciale Lomellina</option>
+                                    	<option value="0134">Nichelino - MondoJuve</option>
+                                    	<option value="0106">Novi Ligure (AL) - Centro Commerciale Novi Center</option>
+                                    	<option value="0067">Olgiate Comasco (CO)</option>
+                                    	<option value="0090">Ovada (AL)</option>
+                                    	<option value="0016">Parona (PV) - Centro Commerciale Centro Parona</option>
+                                    	<option value="0010">Pavone Canavese (TO) - Centro Commerciale Pavone</option>
+                                    	<option value="0026">Pescate (LC)</option>
+                                    	<option value="0041">Pieve Di Soligo (TV) - Centro Commerciale Pievigina</option>
+                                    	<option value="0032">Pieve Fissiraga (LO) - Centro Commerciale Centro Pieve</option>
+                                    	<option value="0036">Pontedassio (IM)</option>
+                                    	<option value="0069">Pradamano (UD) - Pradamano Shopping Center</option>
+                                    	<option value="0107">Romagnano Sesia (NO) - Centro Commerciale Sesia Center</option>
+                                    	<option value="0119">Romano Di Lombardia (BG) - Centro Commerciale Il Borgo</option>
+                                    	<option value="0050">Ronchi Dei Legionari (GO)</option>
+                                    	<option value="0121">Santa Vittoria D&#39;Alba (CN) - Centro Comm. Santa Vittoria d&#39;Alba</option>
+                                    	<option value="0125">Sacile (PN) - Centro Commerciale I Salici</option>
+                                    	<option value="0076">S. Martino In Strada (LO) - Centro Commerciale Lodi Sud</option>
+                                    	<option value="0094">S. Martino Siccomario (PV) - Centro Commerciale San Martino</option>
+                                    	<option value="0129">Sedriano (MI) - Sedriano Shopping Center</option>
+                                    	<option value="0102">Settimo Torinese (TO)</option>
+                                    	<option value="0009">Torino via San Paolo (TO)</option>
+                                    	<option value="0103">Torino via Orvieto (TO)</option>
+                                    	<option value="0113">Torino via G. Bruno (TO) - Centro Commerciale Millecity Center</option>
+                                    	<option value="0124">Vanzaghello (MI) - Il Parco Shopping Center</option>
+                                    	<option value="0135">Vaprio d&#39;Adda (MI)</option>
+                                    	<option value="0040">Verbania</option>
+                                    	<option value="0105">Vercelli (VC) - Centro Commerciale Vercelli</option>
+                                    	<option value="0108">Verolanuova Le Robinie (BS) - Centro Commerciale Le Robinie</option>
+                                    	<option value="0092">Vigliano Biellese (BI) - Centro Commerciale Vigliano</option>
+                                    	<option value="0044">Villanova Monferrato (AL) - Monferrato Shopping Center</option>
+                                    </select>
+                                    <input type="submit" name="ctl00$ContentPlaceHolder1$UcScegliIpermercato1$btSceltaIpermercato" value="Vai" onclick="return checkIpermercato();" id="ctl00_ContentPlaceHolder1_UcScegliIpermercato1_btSceltaIpermercato" class="button button-primary" />
+                                </div>
+                                <span id="ctl00_ContentPlaceHolder1_UcScegliIpermercato1_lblValidation" class="errorValidator" style="display:none">L'ipermercato è obbligatorio</span>
+                            </div>
+                        </div>
+                        <div id="ctl00_ContentPlaceHolder1_pnlElencoPromozioni">
+                            <hr />
+                            <div class="row">
+                                <div id="framecontainer" class="center" style="overflow: hidden;">
+                                    <iframe src="https://stg-viewer-whitelabel.geniale.com/flyers?language=it_it&propertyId=5b55f153-95fc-4301-a7e8-6dbcac1f48aa" frameborder="0" width="100%" height="100%" allow="geolocation"></iframe>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row">
+                                <div class="cols medium5 acenter medium-aright">
+                                    <figure>
+                                        <img src="https://www.bennet.com/resources/img/contents/promozioni/puntiextra.png" alt="punti extra bennet club" />
+                                    </figure>
+                                </div>
+                                <div class="cols medium17 end acenter">
+                                    <p class="uppercase mbottom-half"><strong>Cerca sugli scaffali questo cartellino che ti indica quali prodotti ti fanno accumulare PUNTI EXTRA e l'ammontare dei punti che otterrai con il singolo acquisto.</strong></p>
+                                    <p>Sul tuo scontrino puoi leggere il dettaglio dei PUNTI EXTRA e il totale dei punti accumulati dopo ogni spesa.</p>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                        <p class="notes">
+                            <span id="ctl00_ContentPlaceHolder1_lblNoteVolantini"></span> 
+                        </p>
+                    </div>
+                </div>
+            </main>
+
+            <footer role="contentinfo">
+                <div id="footer-links">
+                    <div class="row">
+                    
+                        <div class="cols medium12">
+
+                            <div class="row">
+                    
+                                <div class="cols xsmall xsmall2 medium12">
+
+                                    <h3>Bennet</h3>
+
+    			                    <ul>
+    				                    <li><a href="/editoriale/editorialeCategoria.aspx?ec=1">Per te</a></li>
+    				                    <li><a href="/editoriale/editorialeCategoria.aspx?ec=2">In cucina</a></li>
+    				                    <li><a href="/editoriale/editorialeCategoria.aspx?ec=3">In coppia</a></li>
+    				                    <li><a href="/editoriale/editorialeCategoria.aspx?ec=4">All'aria aperta</a></li>
+    				                    <li><a href="/editoriale/editorialeCategoria.aspx?ec=5">Con gli amici</a></li>
+    				                    <li><a href="/editoriale/editorialeCategoria.aspx?ec=6">In famiglia</a></li>
+    			                    </ul>
+
+                                </div>
+
+                                <div class="cols xsmall xsmall2 medium12">
+
+                                    <h3>Bennet Club</h3>
+
+    			                    <ul>
+    				                    <li><a href="/bennetClub/bennetClub.aspx">Scopri Bennet Club</a></li>
+                                        
+                                        <li><a href="/bennetClub/raccoltaPunti/premiOnlineRichiedi.aspx">Richiedi premi online</a></li>
+    			                    </ul>
+    			                
+                                    <h3 style="margin-bottom: 15px">Link utili</h3>
+    			                
+                                    <ul>
+    				                    <li><a href="/privacy.aspx">Privacy</a></li>
+    									<li><a href="/cookies.aspx">Politica sui cookie</a></li>
+    				                    
+    			                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="cols medium12">
+
+                            <div class="row">
+                    
+                                <div class="cols xsmall xsmall2 medium12">
+
+                                    <h3>Servizi Bennet</h3>
+
+    			                    <ul>
+    				                    <li><a href="/azienda/serviziPerTe/bennetLibriOnline/bennetLibriPresentazione.aspx">Bennet Libri Online</a></li>
+    				                    <li><a href="/azienda/serviziPerTe/stampafoto/stampafoto.aspx">Stampafoto</a></li>
+    				                    <li><a href="/azienda/serviziPerTe/carteregalo.aspx">Carte regalo</a></li>
+    				                    <li><a href="/azienda/serviziPerTe/personalizzaDiario.aspx">Diario personalizzato</a></li>
+    				                    <li><a href="/azienda/serviziPerTe/prenotazioneLibri.aspx">Testi scolastici</a></li>
+    				                    <li><a href="/azienda/serviziPerTe/bollettiniPostali.aspx">Bollettini postali</a></li>
+    			                    </ul>
+
+                                </div>
+
+                                <div class="cols xsmall xsmall2 medium12">
+
+                                    <h3>L'azienda</h3>
+
+    			                    <ul>
+                                        <li><a href="/azienda/chiSiamo.aspx">Chi siamo</a></li>
+    				                    <li><a href="/azienda/iniziative.aspx">Iniziative</a></li>
+    				                    <li><a href="/azienda/CodiceEticoModelloOrganizzativo.aspx">Codice etico</a></li>
+    				                    <li><a href="/azienda/lavoraConNoi.aspx">Lavora con noi</a></li>
+    				                    <li><a href="/azienda/avvisiRichiamoProdotti.aspx">Richiamo prodotti</a></li>
+    				                    <li><a href="http://www.galleriecommercialibennet.com/" target="_blank">Gallerie commerciali</a></li>
+    			                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="footer-copy">
+                    <div class="row">
+    		            <div class="cols medium18 acenter medium-aleft">
+                            <h4>BENNET S.p.A.</h4>
+                            <p>Sede Amministrativa: 22070 Montano Lucino (CO) Via Enzo Ratti nr. 2 - Registro delle imprese di Milano e C.F./P.IVA 07071700152 - R.E.A. di Milano 1137002 - Capitale sociale €12.310.020,00 i.v. , Socio unico - Bennet.com v 2.0 - © 1999/<span id="ctl00_lblCurrentYear">2018</span></p>
+                        </div>
+                        <div class="cols medium6 acenter medium-aright"><img src="https://www.bennet.com/resources/img/ui/logo-xxlarge.png" alt="bennet"></div>
+                    </div>
+                </div>
+            </footer>
+
+        </form>
+
+        <script src="https://www.bennet.com/resources/scripts/allJs?v=8Bto0ztRgcsUNpuY-rnDdlbrReYttDMoJg03P2V8oo41"></script>
+    </body>
+</html>
