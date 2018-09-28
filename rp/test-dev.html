@@ -16,37 +16,36 @@
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style type="text/css">
-        html,
-  body {
+       html,
+body {
   height: 100%;
   margin: 0
-  }
-        .box {
+}
+
+.box {
   display: flex;
   flex-flow: column;
   height: 100%;
-  }
+}
 
-  .box .row {
+.box .row {
   border: 1px dotted grey;
-  }
+}
 
-  .box .row.header {
+.box .row.header {
   flex: 0 1 auto;
-  /* The above is shorthand for:
-  flex-grow: 0,
-  flex-shrink: 1,
-  flex-basis: auto
-  */
-  }
+}
 
-  .box .row.content {
+.box .row.content {
+  display: flex;
+  flex-flow: column;
   flex: 1 1 auto;
-  }
+  overflow-y: auto;
+}
 
-  .box .row.footer {
+.box .row.footer {
   flex: 0 1 40px;
-  }
+}
   </style>
 </head>
 
