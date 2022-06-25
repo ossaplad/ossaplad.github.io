@@ -18,10 +18,16 @@
       	font-weight: 200;
       }
       
-      #navigationVideo {
+      #navigationVideoContainer {
         position: fixed;
         right: 0;
         bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: 100;
+      }
+
+      #navigationVideo {
         min-width: 100%;
         min-height: 100%;
         z-index: 100;
@@ -85,9 +91,11 @@
   </head>
 
   <body>
+    <div id="navigationVideoContainer">
     <video muted id="navigationVideo">
       <source src="AR-finder.mp4" type="video/mp4">
     </video>
+    </div>
     <div id="loader">
     	<div class="loader-instructions">
     	<span>Inquadra davanti a te per trovare il prodotto desiderato</span>
