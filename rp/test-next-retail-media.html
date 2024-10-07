@@ -9,11 +9,13 @@
 <div id="volantino"></div>
 
 <script>
+cmp = new URLSearchParams(window.location.search).get('cmp') == "true" ? true : false;
+console.log(cmp);
 window.SFviewer({
                 country: 'it_it',
-                id: '5ad75713-8a38-4cb9-8454-7d60ac1f41e1', // Bennet					
+                id: '5ad75713-8a38-4cb9-8454-7d60ac1f41e1', // Test property					
                 container_id: 'volantino',
-                profiling_consent: true,
+                profiling_consent: cmp,
                 sf_onsectionchange: function(event) {
                 	console.log(event)
                 	console.log(JSON.stringify(event))
