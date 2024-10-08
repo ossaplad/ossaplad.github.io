@@ -1,0 +1,28 @@
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://viewer-whitelabel.shopfully.cloud/scripts/v1/init.min.js?12312qwe9qwe'"></script>
+</head>
+
+<body>
+<div id="volantino"></div>
+
+<script>
+cmp = new URLSearchParams(window.location.search).get('cmp') == "true" ? true : false;
+console.log(cmp);
+window.SFviewer({
+                country: 'it_it',
+                id: '5ad75713-8a38-4cb9-8454-7d60ac1f41e1', // Test property					
+                container_id: 'volantino',
+                profiling_consent: cmp,
+                sf_custom_label: 'nazionale',
+                sf_onsectionchange: function(event) {
+                	console.log(event)
+                	console.log(JSON.stringify(event))
+                }
+            });
+</script>
+
+</body>
+</html>
